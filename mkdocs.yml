@@ -1,0 +1,78 @@
+site_name: GitHub Copilot - Documentación Completa
+site_description: Guía completa y práctica sobre GitHub Copilot - Maximiza tu productividad
+site_author: GitHub Copilot Documentation Team
+site_url: https://example.com/copilot-docs
+
+theme:
+  name: material
+  language: es
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.indexes
+    - content.code.copy
+    - content.code.select
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search:
+      lang: es
+  - minify:
+      minify_html: true
+
+nav:
+  - Inicio: index.md
+  - Comenzar: 
+      - Getting Started: getting-started.md
+  - Guías principales:
+      - Inline Chat: inline-chat.md
+      - Chat Lateral: chat-lateral.md
+      - Instructions: instructions.md
+      - Mejores Prácticas: mejores-practicas.md
+  - Referencia:
+      - FAQ: faq.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - tables
+  - footnotes
+  - attr_list
+  - md_in_html
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/github/copilot-docs
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/github
+
+copyright: |
+  &copy; 2026 GitHub Copilot Documentation. 
+  <a href="https://github.com">GitHub</a> es propiedad de Microsoft.
