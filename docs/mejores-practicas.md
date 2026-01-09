@@ -1,153 +1,76 @@
-# Mejores Prácticas - Estrategias Avanzadas
+# Capítulo 5: Mejores Prácticas — Estrategias Avanzadas
 
-## Estructura de solicitudes profesionales
+## Introducción
 
-### El formato de "Contexto + Objetivo + Requisitos"
+Dominar Copilot es saber **cuándo** usarlo y **cómo** validar resultados.
 
-```
-Contexto: Estoy trabajando en un módulo de autenticación en Node.js/Express
-Objetivo: Necesito crear middleware para verificar JWT
-Requisitos:
-  - Debe retornar 401 si no hay token
-  - Debe validar la firma del token
-  - Debe extraer el payload y pasarlo a req.user
-  - Debe usar async/await
-```
+## Estructura de Solicitudes
 
-Este formato proporciona claridad máxima a Copilot.
-
-## Patrones de trabajo efectivos
-
-### 1. Test-First Development con Copilot
+### El patrón Contexto + Objetivo + Requisitos
 
 ```
-/test genera pruebas exhaustivas para esta función
-[revisas las pruebas]
-/generate implementa la función
-[ejecutas las pruebas]
+Contexto: [Tu proyecto]
+Objetivo: [Qué necesitas]
+Requisitos: [Detalles]
+Restricciones: [Lo prohibido]
 ```
 
-### 2. Refactor en ciclos
+## Validación de Código
 
-Primero genera candidato:
-```
-/refactor mejora legibilidad
-```
+### Checklist Antes de Aceptar
 
-Luego itera:
-```
-/refactor pero sin usar lodash, usa métodos nativos de arrays
-```
+- [ ] Legible
+- [ ] Sigue convenciones
+- [ ] Maneja errores
+- [ ] Edge cases cubiertos
+- [ ] Performance correcta
+- [ ] Sin vulnerabilidades
 
-### 3. Documentación post-implementación
+### Nunca Confíes Ciegamente En
 
-```
-/doc añade JSDoc completo con tipos y ejemplos
-```
+- SQL Queries (riesgo inyección)
+- Criptografía
+- Validación de entrada
+- Datos sensibles
 
-## Gestión del contexto efectiva
+## Patrones de Trabajo
 
-### Abre archivos relacionados
+### Test-First Development
 
-Antes de usar inline chat, abre en tabs:
-- Interfaz/tipos relacionados
-- Implementaciones similares
-- Dependencias que vas a usar
+1. Especificar con tests
+2. `/ test` crea suite
+3. `/generate` implementa
+4. Ejecuta tests
 
-Esto enriquece dramáticamente el contexto.
+### Refactoring en Ciclos
 
-### Mantén el archivo guardado
+- Turno 1: mejora legibilidad
+- Turno 2: sin librerías
+- Turno 3: extrae funciones
 
-Un archivo guardado proporciona mejor contexto que uno sin guardar. Usa auto-save.
+## Delegación Inteligente
 
-### Usa comentarios como especificación
+### ✅ SÍ Delega
 
-```javascript
-/**
- * Calcula el descuento aplicable basado en:
- * - Tier de cliente (bronze, silver, gold)
- * - Monto de compra
- * - Si es cliente nuevo (+10% extra)
- * Retorna: {discountPercent, finalAmount}
- */
-function calculateDiscount(tier, amount, isNew) {
-  // Aquí: /generate
-}
-```
-
-## Validación antes de aceptar
-
-Implementa una checklist mental:
-
-- [ ] ¿Es el código legible?
-- [ ] ¿Maneja edge cases?
-- [ ] ¿Sigue convenciones del proyecto?
-- [ ] ¿Tiene tests?
-- [ ] ¿Está documentado?
-
-No aceptes ciegamente.
-
-## Seguridad en primer plano
-
-### Nunca confíes ciegamente en:
-
-- SQL queries (riesgo de inyección)
-- Validación de inputs
-- Código criptográfico
-- APIs con credenciales
-
-Siempre verifica manualmente en estos casos.
-
-### Solicitudes de seguridad
-
-```
-/fix busca vulnerabilidades de seguridad
-especialmente: inyección SQL, XSS, CSRF, autorización
-```
-
-## Optimización de prompts
-
-### De malo a excelente
-
-❌ Malo:
-```
-hazme una función de búsqueda
-```
-
-✅ Mejor:
-```
-necesito función de búsqueda en array de objetos
-que busque en propiedades 'nombre' e 'email'
-con búsqueda case-insensitive y soporte para múltiples términos
-```
-
-✅ Excelente:
-```
-necesito función searchUsers(users, query) que:
-- Recibe array de {id, nombre, email, activo}
-- Busca en 'nombre' e 'email' (case-insensitive)
-- Soporta múltiples términos separados por espacio (AND logic)
-- Retorna array filtrado ordenado por relevancia
-- Retorna [] si query vacío
-- Maneja null/undefined gracefully
-```
-
-## Patrones de delegación efectivos
-
-### Qué SÍ delegues a Copilot:
-
-- Boilerplate y scaffolding
+- Boilerplate
 - Tests básicos
-- Documentación inicial
+- Documentación
 - Refactoring mecánico
-- Traducción entre lenguajes
 
-### Qué NO delegues:
+### ❌ NO Delegues
 
-- Decisiones de diseño complejas
-- Lógica de negocio crítica
-- Validación de seguridad
-- Optimización crítica
+- Decisiones críticas
+- Lógica de negocio
+- Seguridad sensible
+
+## Conclusión
+
+Los mejores desarrolladores saben **cuándo** usar Copilot.
+
+---
+
+**Anterior:** [Instructions](instructions.md)  
+**Siguiente:** [FAQ](faq.md)
 - Código que no entiendes
 
 ## Iteración estratégica

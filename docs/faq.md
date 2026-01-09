@@ -1,62 +1,61 @@
-# Preguntas Frecuentes (FAQ)
+# Capítulo 6: Preguntas Frecuentes — Troubleshooting y Respuestas
 
 ## Preguntas Generales
 
 ### ¿Copilot puede reemplazar programadores?
 
-No. Copilot es un asistente que multiplica tu productividad, pero requiere:
+No. Copilot es un amplificador de productividad que requiere:
 - Dirección clara
 - Validación de código
 - Decisiones arquitectónicas
 - Pensamiento crítico
 
-Programadores + Copilot = súper productivos. Copilot solo = código mediocre.
+Programadores + Copilot = extraordinarios. Copilot solo = código mediocre.
 
 ### ¿Cuál es el costo?
 
-- **Copilot Individual**: $10/mes o $100/año
-- **Copilot Pro**: $20/mes (más límites)
-- **Copilot for Business**: Planes empresariales
-
-Se ofrece prueba gratuita de 2 meses.
+- **Prueba gratuita:** 2 meses para nuevos usuarios
+- **Copilot Individual:** $10/mes o $100/año
+- **Copilot Pro:** $20/mes (más límites)
+- **Copilot for Business:** Administrado por tu organización
 
 ### ¿Puedo usar Copilot offline?
 
-No. Copilot requiere conexión constante a los servidores de GitHub.
+No. Copilot requiere conexión constante a servidores de GitHub.
 
 ### ¿Mis archivos se envían a GitHub?
 
-Sí. El código necesario para completar sugerencias se envía a servidores de GitHub. Lee la política de privacidad para detalles.
+Sí. Fragmentos de código necesarios para generar sugerencias se envían a GitHub. Lee la política de privacidad para detalles específicos.
 
-## Problemas Comunes
+## Problemas Técnicos Comunes
 
-### No recibo sugerencias
+### Problema: No recibo sugerencias
 
 **Soluciones:**
 1. Verifica que Copilot esté habilitado en Settings
-2. Asegúrate de estar autenticado (Ctrl+Shift+P > Copilot: Status)
+2. Confirma que estás autenticado (`Ctrl+Shift+P` > `Copilot: Status`)
 3. Reinicia VS Code
 4. Verifica tu conexión a Internet
 
-### Las sugerencias son malas
+### Problema: Las sugerencias son malas
 
-**Razones comunes:**
-- Tu solicitud es muy vaga
+**Causas comunes:**
+- Tu solicitud es demasiado vaga
 - Falta contexto en el archivo
 - No has guardado recientemente
 - La tarea es muy compleja
 
-**Solución:** Sé más específico y proporciona más contexto.
+**Solución:** Sé más específico. Proporciona más contexto. Abre archivos relacionados en tabs.
 
-### Copilot sugiere código muy lentamente
+### Problema: Copilot sugiere código muy lentamente
 
-Intenta:
-1. Cerrar extensiones no usadas
+**Intenta:**
+1. Cerrar extensiones innecesarias
 2. Reiniciar VS Code
 3. Verificar conexión de red
-4. Revisar que tu máquina no esté sobrecargada
+4. Revisar si tu máquina está sobrecargada (revisor de tareas)
 
-### El código generado tiene bugs
+### Problema: El código generado tiene bugs
 
 Esto es normal. Siempre:
 1. Lee el código antes de aceptar
@@ -64,35 +63,15 @@ Esto es normal. Siempre:
 3. Prueba edge cases
 4. Itera si es necesario
 
-### Conflict with linter/formatter
+### Problema: Conflicto con linter/formatter
 
 Si Copilot sugiere código que tu linter rechaza:
 
 ```
-/refactor pero respetando las reglas de [tu-linter]
+/refactor pero respetando reglas de [tu-linter-name]
 ```
 
-## Uso Empresarial
-
-### ¿Puedo usar Copilot en código propietario?
-
-Sí, con Copilot for Business. Consulta con tu departamento legal.
-
-### ¿Cómo compartir Copilot en el equipo?
-
-Opciones:
-1. **Licencias individuales**: Cada desarrollador su propia licencia
-2. **Copilot for Business**: Gestiónalo desde organización GitHub
-3. **GitHub Enterprise**: Para empresas grandes
-
-### ¿Se entrena Copilot con mi código?
-
-Depende de tu plan:
-- Copilot Individual: Consulta términos
-- Copilot Pro: Mejor privacidad
-- Copilot for Business: Política empresarial
-
-## Seguridad
+## Seguridad y Privacidad
 
 ### ¿Copilot sugiere código con vulnerabilidades?
 
@@ -104,13 +83,13 @@ Puede suceder. Siempre verifica:
 
 Usa `/fix` pero valida manualmente.
 
-### ¿Debo preocuparme por mis datos?
+### ¿Debo preocuparme por privacidad?
 
+Considera:
 - No compartas credenciales o tokens en chat
-- No pongasAPI keys en solicitudes
+- No pongas API keys en solicitudes
 - No solicites ayuda con datos sensibles
-
-Trata a Copilot como un compañero de trabajo público.
+- Trata a Copilot como compañero de trabajo público
 
 ### ¿Cómo manejo código sensible?
 
@@ -119,7 +98,27 @@ Para código que requiere confidencialidad máxima:
 2. O usa Copilot for Business con política clara
 3. Revisa logs de qué enviaste
 
-## Técnicas
+## Uso Empresarial
+
+### ¿Puedo usar Copilot en código propietario?
+
+Sí, con Copilot for Business. Consulta con tu departamento legal.
+
+### ¿Cómo compartir Copilot en el equipo?
+
+Opciones:
+1. **Licencias individuales:** Cada developer su propia licencia
+2. **Copilot for Business:** Gestiónalo desde GitHub organization
+3. **GitHub Enterprise:** Para empresas grandes
+
+### ¿Se entrena Copilot con mi código?
+
+Depende del plan:
+- **Copilot Individual:** Consulta términos
+- **Copilot Pro:** Mejor privacidad
+- **Copilot for Business:** Política empresarial clara
+
+## Técnicas Avanzadas
 
 ### ¿Cómo hago Copilot más preciso?
 
@@ -129,7 +128,7 @@ Para código que requiere confidencialidad máxima:
 4. **Comenta intenciones:** Ayuda a Copilot a entender
 5. **Itera:** Refina solicitudes basado en respuestas
 
-### ¿Cómo debugging con Copilot?
+### ¿Cómo debuggeo con Copilot?
 
 ```
 /fix identifica el bug en este código
@@ -147,6 +146,98 @@ Sí:
 Resultado: ~80% de lo que necesitas. Personaliza el 20% restante.
 
 ### ¿Cómo genero tests completos?
+
+```
+/test crea pruebas exhaustivas incluyendo:
+- Casos felices
+- Edge cases
+- Manejo de errores
+- Valores null/undefined
+```
+
+## Limitaciones
+
+### ¿Cuáles son las limitaciones de Copilot?
+
+**Contexto limitado:** No ve toda tu codebase, solo archivos abiertos  
+**Complejidad:** Puede fallar con lógica muy compleja  
+**Novedad:** Patrones muy recientes podrían no estar en entrenamiento  
+**Iteración:** A veces requiere múltiples turnos para perfeccionar  
+
+### ¿Hay límites de rate?
+
+Depende de tu plan:
+- **Individual:** Generosos (cientos de completions/día)
+- **Pro:** Más altos
+- **Business:** Personalizado
+
+## Decisiones Comunes
+
+### ¿Debo usar Inline Chat o Chat Lateral?
+
+**Inline Chat (`Ctrl+I`)**
+- Cambios rápidos sobre código
+- 1-2 turnos máximo
+- Contexto del archivo actual
+
+**Chat Lateral (`Ctrl+K`)**
+- Debates arquitectónicos
+- Multi-turno conversacional
+- Decisiones técnicas importantes
+
+### ¿Debo generar código o estudiar primero?
+
+**Genera si:**
+- Ya entiendes el patrón
+- Solo necesitas implementación
+- Código es boilerplate
+
+**Estudia primero si:**
+- Patrón es nuevo para ti
+- Lógica es crítica
+- Necesitas profundidad conceptual
+
+### ¿Cuándo debo hacer code review manual?
+
+**Siempre** para:
+- Código de seguridad sensible
+- Lógica financiera crítica
+- Cambios arquitectónicos
+- Primeras contribuciones al proyecto
+
+## Mejoras Futuras y Cambios
+
+### ¿Cómo me mantengo actualizado?
+
+- Revisa documentación oficial de GitHub Copilot periódicamente
+- Sigue cambios en VS Code
+- Experimenta con nuevas características
+- Comparte descubrimientos con el equipo
+
+### ¿Qué cambios esperar?
+
+Copilot mejora constantemente:
+- Modelos más potentes
+- Mejor contexto workspace
+- Integración con más IDEs
+- Features de colaboración
+
+## Recursos Útiles
+
+- **Documentación oficial:** https://github.com/features/copilot
+- **Comunidad:** GitHub Discussions
+- **Feedback:** GitHub Issues
+
+## Conclusión
+
+Copilot es una herramienta en evolución. Los mejores usuarios son quienes entienden sus límites y lo usan conscientemente.
+
+---
+
+**Capítulo anterior:** [Mejores Prácticas](mejores-practicas.md)  
+**Inicio:** [Índice](index.md)
+
+**Última actualización:** Enero 2026
 
 ```
 /test crea pruebas exhaustivas que cubran:
