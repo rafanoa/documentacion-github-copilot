@@ -47,6 +47,8 @@ nav:
       - Chat Lateral: chat-lateral.md
       - Instructions: instructions.md
       - Mejores Prácticas: mejores-practicas.md
+  - Avanzado:
+      - Workflows: workflows.md
   - Referencia:
       - FAQ: faq.md
 

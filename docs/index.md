@@ -38,7 +38,10 @@ Cómo definir instrucciones globales persistentes que Copilot recordará y respe
 ### **Capítulo 5: Estrategias Avanzadas** — [Mejores Prácticas](mejores-practicas.md)
 Técnicas profesionales para escribir prompts efectivos, gestionar contexto, validar resultados y delegar inteligentemente.
 
-### **Capítulo 6: Preguntas Frecuentes** — [FAQ](faq.md)
+### **Capítulo 6: Workflows** — [Workflows de Copilot](workflows.md)
+Cómo estructurar, documentar y ejecutar procedimientos complejos y repetibles con Copilot. Integración con equipo y automatización.
+
+### **Capítulo 7: Preguntas Frecuentes** — [FAQ](faq.md)
 Respuestas a dudas comunes, troubleshooting, consideraciones de seguridad y uso empresarial.
 
 ## Características principales de Copilot
@@ -126,6 +129,7 @@ Usa estos enlaces para saltar directamente a lo que necesitas:
 - 🏛️ **Decisiones técnicas:** [Chat Lateral](chat-lateral.md)
 - ⚙️ **Personalización:** [Instructions](instructions.md)
 - 🚀 **Productividad máxima:** [Mejores Prácticas](mejores-practicas.md)
+- 🔄 **Operaciones avanzadas:** [Workflows](workflows.md)
 - ❓ **Dudas rápidas:** [FAQ](faq.md)
 
 ---
